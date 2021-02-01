@@ -7,37 +7,53 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive pricing component</title>
-
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<div class="container">
-  <div class="title">
-    <h1>
-
-      <span>
-
-      </span>
-    </h1>
-  </div>
-
-  <div class="pricing-container">
-    <div class="section">
-      <p>
-
-      </p>
-      <p>
+  <div class="container">
+   
+    <div class="title">
+      <img src="./images/pattern-circles.svg" alt="Circle.icon">
+      <h1>
+        Simple, traffic-based pricing<br/>
         <span>
-
+          Sign-up for our 30-day trial. No credit card required. 
         </span>
-      </p>
-      <input type="range">
+      </h1>
     </div>
-    <div class="more-options">
-      <p></p>
-      <button></button>
-      <p></p>
-      <p class="discount"></p>
+    
+    <div class="pricing-container">
+      <div class="section">
+        <p>
+          PAGEVIEWS
+          
+        </p>
+        <p>
+          <span>
+          $ 16
+        </span>
+            /month
+            
+        </p>
+        
+        
+      </div>
+      <input min="10000" max="1000000" step="1000" class="slider" type="range" list="pageViewsList">
+      <div class="more-options">
+        <p>
+          Monthly Billing
+        </p>
+        <button type="button">Button</button>
+        <p>
+        Yearly Billing
+        <span>
+          25% discount
+        </span> 
+
+      </p>
     </div>
   </div>
   <div class="start">
@@ -45,14 +61,8 @@
     <div class="bnt-trial"></div>
   </div>
 </div>
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
 
-  Pageviews
-  $ /month
 
-  Monthly Billing
-  Yearly Billing 25% discount
 
   Unlimited websites
   100% data ownership
