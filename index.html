@@ -1,78 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive pricing component</title>
-  
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-  <div class="container">
-   
-    <div class="title">
-      <img src="./images/pattern-circles.svg" alt="Circle.icon">
-      <h1>
-        Simple, traffic-based pricing<br/>
-        <span>
-          Sign-up for our 30-day trial. No credit card required. 
-        </span>
-      </h1>
-    </div>
-    
-    <div class="pricing-container">
-      <div class="section">
-        <p>
-          PAGEVIEWS
-          
-        </p>
-        <p>
-          <span>
-          $ 16
-        </span>
-            /month
-            
-        </p>
-        
-        
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <img src="./images/pattern-circles.svg" alt="Circle.icon" />
+        <h1>
+          Simple, traffic-based pricing<br />
+          <span> Sign-up for our 30-day trial. No credit card required. </span>
+        </h1>
       </div>
-      <input min="10000" max="1000000" step="1000" class="slider" type="range" list="pageViewsList">
-      <div class="more-options">
-        <p>
-          Monthly Billing
-        </p>
-        <button type="button">Button</button>
-        <p>
-        Yearly Billing
-        <span>
-          25% discount
-        </span> 
+      
+      <div class="pricing-container">
+        <div class="section">
+          <p id="pageviews"> 10K PAGEVIEWS</p>
+          <p>
+            <span id="pricing-total"> $ 8.00 </span>
+            /month
+          </p>
+        </div>
+        
+        <input
+        id="campo"
+        type="range"
+        min="1000"
+        max="1000000"
+        value="10000"
+        step="10000"
+        list="pageViewsList"
+        onchange="mostraResultado()"
+        />
 
-      </p>
+        <datalist id="pageViewsList">
+          <option>10000</option>
+          <option>50000</option>
+          <option>100000</option>
+          <option>500000</option>
+          <option>1000000</option>
+        </datalist>
+        
+        <div class="more-options">
+          <p>Monthly Billing</p>
+          
+          <div class="display">
+            <label class="label toggle">
+              <input type="checkbox" class="toggle_input" />
+              <div class="toggle-control"></div>
+            </label>
+          </div>
+          <p>
+            Yearly Billing
+            <span> 25% discount </span>
+          </p>
+        </div>
+        <div class="start">
+          <div class="about">
+            <ul>
+              <li>Unlimited websites</li>
+              <li>100% data ownership</li>
+              <li>Email reports</li>
+            </ul>
+          </div>
+          <div class="bnt-trial">
+            <button>Start my trial</button>
+          </div>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/danielVaini">Daniel Vaini</a>.
+      </div>
     </div>
-  </div>
-  <div class="start">
-    <div class="about"></div>
-    <div class="bnt-trial"></div>
-  </div>
-</div>
-
-
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
+    <script src="./js/range.js"></script>
+    <script src="./js/pricing.js"></script>
+  </body>
+  </html>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
-</html>
